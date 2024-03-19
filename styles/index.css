@@ -1,0 +1,13 @@
+body {
+  background-image: url("/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+}
+
+p {
+  color: white;
+}
+
+#space-text {
+  font-size: large;
+  font-weight: bold;
+}
