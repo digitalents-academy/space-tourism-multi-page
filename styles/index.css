@@ -21,4 +21,10 @@ main {
 
 #explore-circle {
   fill: white;
+  position: relative;
+}
+
+#explore-text {
+  fill: red;
+  position: absolute;
 }
