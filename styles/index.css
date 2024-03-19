@@ -1,13 +1,24 @@
 body {
   background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 p {
   color: white;
+  font-family: Barlow Condensed, serif;
+}
+
+main {
+  width: 500px;
 }
 
 #space-text {
-  font-size: large;
-  font-weight: bold;
+  font-size: 100px;
+  display: block;
+  font-family: Bellefair, serif;
+}
+
+#explore-circle {
+  fill: white;
 }
