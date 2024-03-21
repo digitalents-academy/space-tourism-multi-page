@@ -5,23 +5,30 @@ body {
   overflow: hidden; /* anything outside of the body is hidden, if things disappear, this is probably the issue. Also prevents scrollbars from appearing to accomodate large objects unless body is expanded so be aware of that.*/
 }
 
+#thin-white-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(100, 100, 100, 0.4);
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
   backdrop-filter: blur(20px);
-  width: 100px;
+  background-color: rgba(100, 100, 100, 0.1);
+  width: 60%;
   position: fixed;
   right: 0;
-  top: 10;
-  z-index: 100;
+  top: 5%;
 }
 nav ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 nav ul li {
   list-style: none;
   display: inline-block;
+  margin: 15px;
 }
 
 p {
@@ -34,13 +41,14 @@ main {
   font-size: 20px;
   font-weight: lighter;
   letter-spacing: 1px;
+  position: fixed;
+  left: 10%;
+  bottom: 10%;
 }
-
 #so-you-want-text {
   font-size: 28px;
   display: block;
 }
-
 #space-text {
   font-size: 100px;
   display: block;
@@ -49,19 +57,22 @@ main {
 }
 
 #explore-circle-bg-svg {
-  position: relative;
-  left: 1000px;
-  bottom: 0px;
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
   overflow: clip;
+  width: 200px;
+  height: 200px;
 }
 #explore-circle {
   fill: white;
   position: absolute;
-  
+  cursor: pointer;
 }
 #explore-text {
   font-family: Bellefair, serif;
   font-size: 30px;
   text-anchor: middle;
   position: absolute;
+  cursor: pointer;
 }
