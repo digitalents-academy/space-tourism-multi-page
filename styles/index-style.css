@@ -2,13 +2,47 @@ body {
   background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden; /* anything outside of the body is hidden, if things disappear, this is probably the issue. Also prevents scrollbars from appearing to accomodate large objects unless body is expanded so be aware of that.*/
+  font-family: Barlow Condensed, serif;
+}
+
+:root {
+  --header-top-percentage: 5%;
+}
+
+p {
+  color: white;
+  font-family: Barlow Condensed, serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: var(--header-top-percentage);
+  left: 0;
+  right: 0;
+  margin-left: 3%;
+}
+
+#logo-container {
+  position: relative;
+}
+
+#logo {
+  position: absolute;
+  transform: translateY(-50%);
 }
 
 #thin-white-line {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(100, 100, 100, 0.4);
+  position: fixed;
+  left: 10%;
+  right: 55%;
+  height: 2px;
+  background-color: rgba(140, 140, 140, 0.4);
+  z-index: 100;
 }
 
 nav {
@@ -16,24 +50,56 @@ nav {
   backdrop-filter: blur(20px);
   background-color: rgba(100, 100, 100, 0.1);
   width: 60%;
-  position: fixed;
-  right: 0;
-  top: 5%;
+  height: 80px;
 }
+
 nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: stretch;
+  margin: 0;
+  width: 100%;
 }
+
 nav ul li {
   list-style: none;
   display: inline-block;
-  margin: 15px;
+  margin: 0px 20px;
+  padding: 0px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-p {
+nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: white;
+  transition: height 0.3s;
+}
+
+nav ul li.active::after {
+  height: 1px;
+}
+
+nav ul li:hover::after {
+  height: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
   color: white;
-  font-family: Barlow Condensed, serif;
+}
+
+nav ul li a:hover {
+  color: white;
 }
 
 main {
@@ -45,10 +111,12 @@ main {
   left: 10%;
   bottom: 10%;
 }
+
 #so-you-want-text {
   font-size: 28px;
   display: block;
 }
+
 #space-text {
   font-size: 100px;
   display: block;
@@ -64,11 +132,13 @@ main {
   width: 200px;
   height: 200px;
 }
+
 #explore-circle {
   fill: white;
   position: absolute;
   cursor: pointer;
 }
+
 #explore-text {
   font-family: Bellefair, serif;
   font-size: 30px;
