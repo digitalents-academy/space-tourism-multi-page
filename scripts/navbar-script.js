@@ -12,13 +12,13 @@ liElements.forEach(li => {
         window.location.href = 'index.html';
         break;
       case '01 destination':
-        window.location.href = 'destination.html';
+        window.location.href = 'destination-moon.html';
         break;
       case '02 crew':
-        window.location.href = 'crew.html';
+        window.location.href = 'crew-commander.html';
         break;
       case '03 technology':
-        window.location.href = 'technology.html';
+        window.location.href = 'technology-vehicle.html';
         break;
       default:
         console.log('Invalid page name');

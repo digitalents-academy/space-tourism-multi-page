@@ -5,15 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/navbar-style.css">
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
 <body>
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <header>
+    <div width="48px" height="48px" id="logo-container">
+      <img src="assets/shared/logo.svg" alt="logo" id="logo">
+    </div>
+
+    <div id="thin-white-line"></div>
+    
+    <nav>
+      <ul>
+        <li><a>00 HOME</a></li>
+        <li><a>01 DESTINATION</a></li>
+        <li class="active"><a>02 CREW</a></li>
+        <li><a>03 TECHNOLOGY</a></li>
+      </ul>
+    </nav>
+  </header>
 
   02 Meet your crew
 
@@ -23,5 +36,6 @@
   Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
   the Linux-based Ubuntu operating system. Shuttleworth became the first South 
   African to travel to space as a space tourist.
+  <script src="scripts/navbar-script.js"></script>
 </body>
 </html>
