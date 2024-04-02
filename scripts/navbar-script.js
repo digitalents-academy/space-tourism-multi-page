@@ -1,6 +1,5 @@
 
-const nav = document.querySelector('nav');
-const liElements = nav.querySelectorAll('li');
+const liElements = document.querySelectorAll('li');
 
 liElements.forEach(li => {
   li.addEventListener('click', function() {
@@ -25,4 +24,8 @@ liElements.forEach(li => {
         break;
     }
   });
+});
+
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+  document.getElementById('dropdown-menu').style.display = 'block';
 });
