@@ -1,4 +1,4 @@
-:root {
+*, :before, ::after {
     margin: 0;
     padding: 0;
 }
@@ -102,6 +102,10 @@ body {
     padding-bottom: 7px;
     color: rgb(200,200,200);
     text-decoration: none; 
+}
+
+.button:hover {
+    color: azure;
 }
 
 .active {
