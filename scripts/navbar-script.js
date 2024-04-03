@@ -3,8 +3,7 @@ const liElements = document.querySelectorAll('li');
 
 liElements.forEach(li => {
   li.addEventListener('click', function() {
-    // Get the text content of the clicked li element
-    const pageName = li.textContent.trim().toLowerCase(); // Convert to lowercase for simplicity
+    const pageName = li.textContent.trim().toLowerCase();
 
     switch (pageName) {
       case '00 home':
@@ -27,5 +26,14 @@ liElements.forEach(li => {
 });
 
 document.getElementById('hamburger-menu').addEventListener('click', function() {
-  document.getElementById('dropdown-menu').style.display = 'block';
+  var dropdownMenu = document.getElementById('dropdown-menu-div');
+  
+  dropdownMenu.classList.toggle('show');
+});
+
+window.addEventListener('resize', function() {
+  var dropdownMenu = document.getElementById('dropdown-menu-div');
+  if (window.innerWidth > 930) { 
+    dropdownMenu.classList.remove('show');
+  }
 });
