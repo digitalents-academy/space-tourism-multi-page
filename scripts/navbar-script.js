@@ -1,5 +1,5 @@
-
 const liElements = document.querySelectorAll('li');
+var dropdownMenu = document.getElementById('dropdown-menu-div');
 
 liElements.forEach(li => {
   li.addEventListener('click', function() {
@@ -25,15 +25,16 @@ liElements.forEach(li => {
   });
 });
 
-document.getElementById('hamburger-menu').addEventListener('click', function() {
-  var dropdownMenu = document.getElementById('dropdown-menu-div');
-  
+document.getElementById('hamburger-menu-div').addEventListener('click', () => {
   dropdownMenu.classList.toggle('show');
 });
 
-window.addEventListener('resize', function() {
-  var dropdownMenu = document.getElementById('dropdown-menu-div');
-  if (window.innerWidth > 930) { 
+document.addEventListener('click', event => {
+  if (!document.getElementById('hamburger-menu').contains(event.target)) {
     dropdownMenu.classList.remove('show');
   }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) dropdownMenu.classList.remove('show');
 });

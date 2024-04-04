@@ -63,6 +63,7 @@ nav ul {
   justify-content: space-around;
   align-items: stretch;
   margin: 0;
+  padding-left: 0;
   width: 100%;
 }
 
@@ -172,7 +173,7 @@ nav ul li a:hover {
   width: 5px;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 900px) {
   nav {
     width: 10%;
   }
