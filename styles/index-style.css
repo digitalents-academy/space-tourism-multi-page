@@ -3,7 +3,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*overflow: hidden; /* anything outside of the body is hidden, if things disappear, this is probably the issue. Also prevents scrollbars from appearing to accomodate large objects unless body is expanded so be aware of that.*/
   font-family: Barlow Condensed, serif;
 }
 
@@ -15,11 +14,16 @@ main {
   position: fixed;
   left: 10%;
   bottom: 10%;
+  transition: font-size 1s;
+  transition: width 2s;
+  transform: height 2s;
+  background-color: wheat;
 }
 
 #so-you-want-text {
   font-size: 28px;
   display: block;
+  transition: font-size 1s;
 }
 
 #space-text {
@@ -27,18 +31,23 @@ main {
   display: block;
   font-family: Bellefair, serif;
   margin: 0;
+  transition: font-size 1s;
 }
 
 @media screen and (max-width: 575px) {
-  /* Styles for small devices */
   main {
     width: 300px;
     font-size: 16px;
   }
+  #so-you-want-text {
+    font-size: 16px;
+  }
+  #space-text {
+    font-size: 50px;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
-  /* Styles for medium devices */
   main {
     width: 400px;
     font-size: 20px;
@@ -46,10 +55,12 @@ main {
   #so-you-want-text {
     font-size: 20px;
   }
+  #space-text {
+    font-size: 70px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* Styles for large devices */
   main {
     width: 500px;
     font-size: 24px;
@@ -57,10 +68,12 @@ main {
   #so-you-want-text {
     font-size: 24px;
   }
+  #space-text {
+    font-size: 80px;
+  }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* Styles for extra large devices */
+@media screen and (min-width: 992px) and (max-width: 1079px) {
   main {
     width: 600px;
     font-size: 28px;
@@ -68,16 +81,21 @@ main {
   #so-you-want-text {
     font-size: 28px;
   }
+  #space-text {
+    font-size: 90px;
+  }
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1439px) {
-  /* Styles for devices between 1080px and 1439px */
   main {
-    width: 400px;
-    font-size: 20px;
+    width: 700px;
+    font-size: 32px;
   }
   #so-you-want-text {
-    font-size: 20px;
+    font-size: 32px;
+  }
+  #space-text {
+    font-size: 100px;
   }
 }
 
@@ -89,6 +107,9 @@ main {
   #so-you-want-text {
     font-size: 36px;
   }
+  #space-text {
+    font-size: 110px;
+  }
 }
 
 @media screen and (min-width: 2160px) {
@@ -98,6 +119,9 @@ main {
   }
   #so-you-want-text {
     font-size: 40px;
+  }
+  #space-text {
+    font-size: 120px;
   }
 }
 
