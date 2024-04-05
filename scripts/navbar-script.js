@@ -1,11 +1,9 @@
-
-const nav = document.querySelector('nav');
-const liElements = nav.querySelectorAll('li');
+const liElements = document.querySelectorAll('li');
+var dropdownMenu = document.getElementById('dropdown-menu-div');
 
 liElements.forEach(li => {
   li.addEventListener('click', function() {
-    // Get the text content of the clicked li element
-    const pageName = li.textContent.trim().toLowerCase(); // Convert to lowercase for simplicity
+    const pageName = li.textContent.trim().toLowerCase();
 
     switch (pageName) {
       case '00 home':
@@ -25,4 +23,18 @@ liElements.forEach(li => {
         break;
     }
   });
+});
+
+document.getElementById('hamburger-menu-div').addEventListener('click', () => {
+  dropdownMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', event => {
+  if (!document.getElementById('hamburger-menu').contains(event.target)) {
+    dropdownMenu.classList.remove('show');
+  }
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) dropdownMenu.classList.remove('show');
 });

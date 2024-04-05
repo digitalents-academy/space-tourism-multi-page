@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(/space-tourism-multi-page/assets/destination/background-destination-desktop.jpg);
+    background-image: url("/space-tourism-multi-page/assets/destination/background-destination-desktop.jpg");
     background-size: 100%;
     width: 100vw;
     display: flex;
@@ -144,7 +144,7 @@ body {
 
 @media screen and (max-width: 2076px) {
     body {
-        background: url(/space-tourism-multi-page/assets/destination/background-destination-tablet.jpg);
+        background: url("/assets/destination/background-destination-tablet.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -152,7 +152,7 @@ body {
 
 @media screen and (max-width: 976px) {
     body {
-        background: url(/space-tourism-multi-page/assets/destination/background-destination-mobile.jpg);
+        background: url("/space-tourism-multi-page/assets/destination/background-destination-mobile.jpg");
         background-repeat: no-repeat;
         background-size: cover;
     }
