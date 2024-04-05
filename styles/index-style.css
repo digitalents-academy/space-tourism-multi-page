@@ -1,3 +1,7 @@
+:root {
+  --circle-right-margin: calc(5% + (10 - 5) * ((100vw - 400px) / (800 - 400)));
+}
+
 body {
   background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover;
@@ -127,7 +131,7 @@ main {
 
 #explore-circle-bg-svg {
   position: fixed;
-  right: 10%;
+  right: var(--circle-right-margin);
   bottom: 10%;
   overflow: clip;
   width: 200px;
