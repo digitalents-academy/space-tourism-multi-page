@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="styles/navbar-style.css">
-  
+  <link rel="stylesheet" href="styles/crew-style.css" <!-- Barlow Condensed font vv-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Barlow font vv-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Barlow Condensed font vv-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Bellefair font vv-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Space tourism website</title>
 </head>
+
 <body>
 
   <header>
@@ -17,7 +35,7 @@
     </div>
 
     <div id="thin-white-line"></div>
-    
+
     <nav>
       <ul>
         <li><a>00 HOME</a></li>
@@ -28,14 +46,35 @@
     </nav>
   </header>
 
-  02 Meet your crew
-
-  Mission Specialist
-  Mark Shuttleworth
-
-  Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
-  the Linux-based Ubuntu operating system. Shuttleworth became the first South 
-  African to travel to space as a space tourist.
+  <div class="destination-info">
+    <div class="destination-header-content">
+      <div class="destination-number">02</div>
+      <div class="destination-header">MEET YOUR CREW</div>
+    </div>
+    <div class="text-image-row">
+      <div class="text-column">
+        <div class="crew-main">
+          <div class="rank-title">MISSION SPECIALIST</div>
+          <div class="person-name">MARK SHUTTLEWORTH</div>
+    
+          <div class="person-information">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+            the Linux-based Ubuntu operating system. Shuttleworth became the first South
+            African to travel to space as a space tourist.
+          </div>
+        </div>
+        <div class="navigation-dots">
+          <div class="dot" onclick="document.location='crew-commander.html'"></div>
+          <div class="dot" onclick="document.location='crew-engineer.html'"></div>
+          <div class="dot" onclick="document.location='crew-pilot.html'"></div>
+          <div class="dot-active" onclick="document.location='crew-specialist.html'"></div>
+        </div>
+      </div>
+      <div class="image-content">
+        <img src="./assets/crew/image-mark-shuttleworth.png">
+    </div>
+  </div>
   <script src="scripts/navbar-script.js"></script>
 </body>
+
 </html>
+

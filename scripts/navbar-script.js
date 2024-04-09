@@ -6,7 +6,7 @@ liElements.forEach(li => {
   li.addEventListener('click', function() {
     // Get the text content of the clicked li element
     const pageName = li.textContent.trim().toLowerCase(); // Convert to lowercase for simplicity
-
+    console.log(pageName)
     switch (pageName) {
       case '00 home':
         window.location.href = 'index.html';
