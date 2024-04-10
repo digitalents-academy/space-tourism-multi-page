@@ -1,0 +1,158 @@
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/assets/destination/background-destination-desktop.jpg");
+    background-size: 100%;
+    width: 100vw;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    color: white;
+}
+
+.destination-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    margin-top: 300px;
+    width: 80%;
+    height: max-content;
+}
+
+.destination-header-content {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35px;
+    align-items: center;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 40px;
+    width: 90%;
+    padding-left: 200px;
+}
+
+.destination-header {
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+    letter-spacing: 4px;
+}
+
+.destination-number {
+    color: rgb(96, 96, 96);
+}
+
+.image-text-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 200px;
+    width: 100%;
+}
+
+.image-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+}
+
+.image {
+    width: 80%; 
+    height: 80%;
+    margin-bottom: 100px;
+}
+
+.picked-destination {
+    font-size: 100px;
+}
+
+.destination-paragraph {
+    padding: 30px 0 70px;
+    font-size: 20px;
+    font-family: "Barlow", sans-serif;
+    line-height: 30px;
+    color: rgb(200, 200, 200);
+    border-bottom: 1px solid rgb(86, 80, 80);
+}
+
+.text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 40%;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 40px;
+    color: rgb(200,200,200);
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+.button {
+    font-size: 24px;
+    padding-bottom: 7px;
+    color: rgb(200,200,200);
+    text-decoration: none; 
+}
+
+:not(nav ul)>.active {
+    border-bottom: 2px solid;
+    color: white;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 100px;
+    width: 100%;
+}
+
+.detail-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.detail-column-divide {
+    padding-right: 50px;
+}
+
+.destination-head {
+    font-family: "Barlow Condensed";
+    color: rgb(200, 200, 200);
+    padding-bottom: 5px;
+}
+
+.destination-data {
+    font-size: 35px;
+    font-family: "Barlow", sans-serif;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 2076px) {
+    body {
+        background: url("/assets/destination/background-destination-tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 976px) {
+    body {
+        background: url("/assets/destination/background-destination-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
