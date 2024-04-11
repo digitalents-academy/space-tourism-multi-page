@@ -1,5 +1,13 @@
 :root {
-  --circle-right-margin: calc(5% + (10 - 5) * ((100vw - 400px) / (800 - 400)));
+  --initial-bottom-position: 10%; /* Represents the initial bottom position when at --viewport-max-width: */
+  --base-transition-difference: 20; /* Represents the base transition difference */
+  --transition-adjustment: 10; /* Represents the adjustment value in the transition calculation */
+  --viewport-min-width: 400; /* Represents the minimum viewport width */
+  --viewport-max-width: 800; /* Represents the maximum viewport width */
+
+  --main-bottom-transition: calc(var(--initial-bottom-position) - (var(--base-transition-difference) - var(--transition-adjustment)) * ((100vw - var(--viewport-min-width)) / (1 * (var(--viewport-max-width) - var(--viewport-min-width)))));
+  
+  --circle-right-margin: calc(5% + (var(--transition-adjustment) - 5) * ((100vw - 400px) / (800 - 400)));
 }
 
 body {
@@ -19,11 +27,9 @@ main {
   letter-spacing: 1px;
   position: fixed;
   left: 10%;
-  bottom: 10%;
-  transition: font-size 1s;
-  transition: width 2s;
-  transform: height 2s;
-  background-color: wheat;
+  bottom: var(--main-bottom-transition);
+  transition: font-size 1s, width 2s, height 2s;
+  background-color: wheat; /* For debugging purposes */
 }
 
 #so-you-want-text {
