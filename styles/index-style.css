@@ -1,13 +1,6 @@
 :root {
-  --initial-bottom-position: 10%; /* Represents the initial bottom position when at --viewport-max-width: */
-  --base-transition-difference: 20; /* Represents the base transition difference */
-  --transition-adjustment: 10; /* Represents the adjustment value in the transition calculation */
-  --viewport-min-width: 400; /* Represents the minimum viewport width */
-  --viewport-max-width: 800; /* Represents the maximum viewport width */
-
-  --main-bottom-transition: calc(var(--initial-bottom-position) - (var(--base-transition-difference) - var(--transition-adjustment)) * ((100vw - var(--viewport-min-width)) / (1 * (var(--viewport-max-width) - var(--viewport-min-width)))));
-  
-  --circle-right-margin: calc(5% + (var(--transition-adjustment) - 5) * ((100vw - 400px) / (800 - 400)));
+  --circle-right-margin: calc(5% + (10 - 5) * ((100vw - 400px) / (800 - 400)));
+  font-size: 20px;
 }
 
 body {
@@ -22,119 +15,28 @@ body {
 
 main {
   width: 400px;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: lighter;
   letter-spacing: 1px;
   position: fixed;
   left: 10%;
-  bottom: var(--main-bottom-transition);
-  transition: font-size 1s, width 2s, height 2s;
-  background-color: wheat; /* For debugging purposes */
+  bottom: 35%;
+  transition: font-size 1s, width 0.5s, height 0.5s; /* TEMP values */
+  background-color: wheat; /* TEMP */
 }
 
 #so-you-want-text {
-  font-size: 28px;
+  font-size: 1.4rem;
   display: block;
   transition: font-size 1s;
 }
 
 #space-text {
-  font-size: 100px;
+  font-size: 5rem;
   display: block;
   font-family: Bellefair, serif;
   margin: 0;
   transition: font-size 1s;
-}
-
-@media screen and (max-width: 575px) {
-  main {
-    width: 300px;
-    font-size: 16px;
-  }
-  #so-you-want-text {
-    font-size: 16px;
-  }
-  #space-text {
-    font-size: 50px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  main {
-    width: 400px;
-    font-size: 20px;
-  }
-  #so-you-want-text {
-    font-size: 20px;
-  }
-  #space-text {
-    font-size: 70px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  main {
-    width: 500px;
-    font-size: 24px;
-  }
-  #so-you-want-text {
-    font-size: 24px;
-  }
-  #space-text {
-    font-size: 80px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1079px) {
-  main {
-    width: 600px;
-    font-size: 28px;
-  }
-  #so-you-want-text {
-    font-size: 28px;
-  }
-  #space-text {
-    font-size: 90px;
-  }
-}
-
-@media screen and (min-width: 1080px) and (max-width: 1439px) {
-  main {
-    width: 700px;
-    font-size: 32px;
-  }
-  #so-you-want-text {
-    font-size: 32px;
-  }
-  #space-text {
-    font-size: 100px;
-  }
-}
-
-@media screen and (min-width: 1440px) and (max-width: 2159px) {
-  main {
-    width: 800px;
-    font-size: 36px;
-  }
-  #so-you-want-text {
-    font-size: 36px;
-  }
-  #space-text {
-    font-size: 110px;
-  }
-}
-
-@media screen and (min-width: 2160px) {
-  main {
-    width: 700px;
-    font-size: 40px;
-  }
-  #so-you-want-text {
-    font-size: 40px;
-  }
-  #space-text {
-    font-size: 120px;
-  }
 }
 
 #explore-circle-bg-svg {
@@ -154,8 +56,106 @@ main {
 
 #explore-text {
   font-family: Bellefair, serif;
-  font-size: 30px;
+  font-size: 1.5rem;
   position: absolute;
   text-anchor: middle;
   cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+  main {
+    width: 80%;
+    font-size: 0.8rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 0.8rem;
+  }
+  #space-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main {
+    width: 400px;
+    font-size: 1rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1rem;
+  }
+  #space-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  main {
+    width: 500px;
+    font-size: 1.2rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1.2rem;
+  }
+  #space-text {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1079px) {
+  main {
+    width: 600px;
+    font-size: 1.4rem;
+    bottom: 20%;
+  }
+  #so-you-want-text {
+    font-size: 1.4rem;
+  }
+  #space-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1439px) {
+  main {
+    width: 700px;
+    font-size: 1.6rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 1.6rem;
+  }
+  #space-text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2159px) {
+  main {
+    width: 800px;
+    font-size: 1.8rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 1.8rem;
+  }
+  #space-text {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 2160px) {
+  main {
+    width: 700px;
+    font-size: 2rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 2rem;
+  }
+  #space-text {
+    font-size: 6rem;
+  }
 }
