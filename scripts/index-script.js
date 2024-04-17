@@ -32,4 +32,10 @@ function logBottomValue() {
 
   console.log('Calculated bottom value:', bottomValue);
   console.log('Bottom value as a percentage:', bottomPercentage + '%');
+
+  const element = document.querySelector('#explore-circle-bg-svg');
+  const computedStyle2 = window.getComputedStyle(element);
+  const leftValue = computedStyle2.getPropertyValue('left');
+
+  console.log('Calculated left value:', leftValue);
 }
