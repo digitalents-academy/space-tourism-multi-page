@@ -1,38 +1,45 @@
+:root {
+  --circle-right-margin: calc(5% + (10 - 5) * ((100vw - 400px) / (800 - 400)));
+  font-size: 20px;
+}
+
 body {
   background-image: url("/assets/home/background-home-desktop.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  /*overflow: hidden;  anything outside of the body is hidden, if things disappear, this is probably the issue. Also prevents scrollbars from appearing to accomodate large objects unless body is expanded so be aware of that.*/
   font-family: Barlow Condensed, serif;
 }
 
 main {
   width: 400px;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: lighter;
   letter-spacing: 1px;
   position: fixed;
   left: 10%;
-  bottom: 10%;
+  bottom: 35%;
+  transition: font-size 1s, width 0.5s, height 0.5s;
 }
 
 #so-you-want-text {
-  font-size: 28px;
+  font-size: 1.4rem;
   display: block;
+  transition: font-size 1s;
 }
 
 #space-text {
-  font-size: 100px;
+  font-size: 5rem;
   display: block;
   font-family: Bellefair, serif;
   margin: 0;
+  transition: font-size 1s;
 }
 
 #explore-circle-bg-svg {
   position: fixed;
-  right: 10%;
+  right: var(--circle-right-margin);
   bottom: 10%;
   overflow: clip;
   width: 200px;
@@ -41,14 +48,239 @@ main {
 
 #explore-circle {
   fill: white;
-  position: absolute;
+  position: relative;
   cursor: pointer;
 }
 
 #explore-text {
   font-family: Bellefair, serif;
-  font-size: 30px;
-  text-anchor: middle;
+  font-size: 1.5rem;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  text-anchor: middle;
   cursor: pointer;
+}
+
+@media screen and (max-width: 376px) {
+  main {
+    width: 80%;
+    font-size: 1rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1rem;
+  }
+  #space-text {
+    font-size: 3rem;
+  }
+  #explore-circle-bg-svg {
+    bottom: 3%;
+  }
+  #explore-circle {
+    r: 75px; /* Crying like a pomudachi. Ignore the whining, it works. */
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 575px) {
+  main {
+    width: 80%;
+    font-size: 1.2rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1.2rem;
+  }
+  #space-text {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 377px) and (max-width: 575px) and (max-height: 500px) {
+  main {
+    width: 80%;
+    font-size: 0.8rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 0.8rem;
+  }
+  #space-text {
+    font-size: 3rem;
+  }
+  #explore-circle-bg-svg {
+    right: 0%;
+  }
+  #explore-circle {
+    r: 75px;
+  }
+  #explore-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  main {
+    width: 400px;
+    font-size: 1rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1rem;
+  }
+  #space-text {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) and (max-height: 500px) {
+  main {
+    width: 400px;
+    font-size: 1rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 1rem;
+  }
+  #space-text {
+    font-size: 3.5rem;
+  }
+  #explore-circle-bg-svg {
+    right: 0%;
+  }
+  #explore-circle {
+    r: 75px;
+  }
+  #explore-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  main {
+    width: 80%;
+    font-size: 1.6rem;
+    bottom: 35%;
+  }
+  #so-you-want-text {
+    font-size: 1.6rem;
+  }
+  #space-text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) and (max-height: 500px) {
+  main {
+    width: 500px;
+    font-size: 1.1rem;
+    bottom: 10%;
+    height: 300px;
+  }
+  #so-you-want-text {
+    font-size: 1.1rem;
+  }
+  #space-text {
+    font-size: 3.7rem;
+  }
+  #explore-circle-bg-svg {
+    right: 0%;
+  }
+  #explore-circle {
+    r: 75px;
+  }
+  #explore-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1079px) {
+  main {
+    width: 600px;
+    font-size: 1.4rem;
+    bottom: 20%;
+  }
+  #so-you-want-text {
+    font-size: 1.4rem;
+  }
+  #space-text {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1079px) and (max-height: 500px) {
+  main {
+    width: 600px;
+    font-size: 1.4rem;
+    bottom: 20%;
+  }
+  #so-you-want-text {
+    font-size: 1.4rem;
+  }
+  #space-text {
+    font-size: 4.5rem;
+  }
+  #explore-circle-bg-svg {
+    right: 0%;
+  }
+  #explore-circle {
+    r: 75px;
+  }
+  #explore-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1439px) {
+  main {
+    width: 700px;
+    font-size: 1.6rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 1.6rem;
+  }
+  #space-text {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 2158px) {
+  main {
+    width: 800px;
+    font-size: 1.8rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 1.8rem;
+  }
+  #space-text {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (min-width: 2159px) {
+  main {
+    width: 1000px;
+    font-size: 3rem;
+    bottom: 10%;
+  }
+  #so-you-want-text {
+    font-size: 3rem;
+  }
+  #space-text {
+    font-size: 9rem;
+  }
+  #explore-circle-bg-svg {
+    height: 500px;
+    width: 500px;
+  }
+  #explore-circle {
+    r: 150px;
+    transform: translateX(30%) translateY(30%);
+  }
+  #explore-text {
+    transform: translate(30%, 30%);
+    font-size: 2rem;
+  }
 }
