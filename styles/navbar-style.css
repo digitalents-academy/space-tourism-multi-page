@@ -4,11 +4,6 @@
   --header-height: 80px;
 }
 
-p {
-  color: white;
-  font-family: Barlow Condensed, serif;
-}
-
 #extended-header {
   display: flex;
   flex-direction: column;
@@ -54,6 +49,7 @@ nav {
   width: 60%;
   min-width: 80px;
   height: var(--header-height);
+  font-family: Barlow Condensed, serif;
   transition: all 0.3s;
 }
 
