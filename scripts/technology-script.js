@@ -1,22 +1,20 @@
-const buttonElements = document.querySelectorAll('button');
+const buttonContainer = document.getElementById('buttons-container');
 
-buttonElements.forEach((button) => {
-  button.addEventListener('click', function() {
-    const buttonContent = button.textContent.trim();
+buttonContainer.addEventListener('click', function(event) {
+  const clickedButton = event.target.closest('button');
 
-    switch (buttonContent) {
-      case '1':
-        window.location.href = 'technology-vehicle.html';
-        break;
-      case '2':
-        window.location.href = 'technology-spaceport.html';
-        break;
-      case '3':
-        window.location.href = 'technology-capsule.html';
-        break;
-      default:
-        console.log('There is no easter eggs here. Go away.');
-        break;
+  if (clickedButton) {
+    const buttonContent = clickedButton.textContent.trim();
+
+    const redirectUrls = {
+      '1': 'technology-vehicle.html',
+      '2': 'technology-spaceport.html',
+      '3': 'technology-capsule.html'
+    };
+
+    const targetUrl = redirectUrls[buttonContent];
+    
+      window.location.href = targetUrl;
     }
-  });
-});
+  }
+);
