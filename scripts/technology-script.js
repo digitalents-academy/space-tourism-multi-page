@@ -13,7 +13,6 @@ buttonContainer.addEventListener('click', function(event) {
     };
 
     const targetUrl = redirectUrls[buttonContent];
-    
       window.location.href = targetUrl;
     }
   }
