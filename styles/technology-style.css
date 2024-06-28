@@ -8,7 +8,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  overflow: hidden;
   color: white;
   font-family: Barlow Condensed, serif;
 }
@@ -62,6 +61,7 @@ button.active {
 }
 
 h1 {
+  display: inline-block;
   margin-top: calc(var(--header-height) + var(--header-top-percentage) + 20px);
   margin-bottom: 0;
   font-weight: normal;
@@ -102,48 +102,231 @@ figure > img {
   object-fit: cover;
 }
 
-@media screen and (max-width: 376px) {
-  
+@media screen and (max-width: 376px) and (orientation: portrait) {
+  #page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0%;
+    }
+  #contents {
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+    width: 90%;
+  }
+  #buttons-container {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  main {
+    margin-top: 0;
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 377px) and (max-width: 575px) {
-  
+@media screen and (max-height: 376px) and (orientation: landscape) {
+  #page {
+    margin-left: 5%;
+  }
+  h1 {
+    margin-top: calc(var(--header-height) + var(--header-top-percentage) - 30px);
+  }
+  button {
+    width: 60px;
+    font-size: 30px;
+  }
+  main {
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  #figure {
+    width: 25%;
+  }
 }
 
-@media screen and (min-width: 377px) and (max-width: 575px) and (max-height: 500px) {
-  
+@media screen and (min-width: 377px) and (max-width: 575px) and (orientation: portrait) {
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  
+@media screen and (min-height: 377px) and (max-height: 575px) and (orientation: landscape) {
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 576px) and (max-width: 767px) and (max-height: 500px) {
-  
+@media screen and (min-width: 576px) and (max-width: 767px) and (orientation: portrait) {
+  #contents {
+    flex-direction: column;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  
+@media screen and (min-height: 576px) and (max-height: 767px) and (orientation: landscape) {
+  #contents {
+    flex-direction: column;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) and (max-height: 500px) {
-  
+@media screen and (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  #page {
+    margin-left: 0;
+  }
+  h1 {
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
+  #contents {
+    flex-direction: column;
+    left: 0;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1079px) {
-  
+@media screen and (min-height: 768px) and (max-height: 991px) and (orientation: landscape) {
+  #contents {
+    flex-direction: column;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1079px) and (max-height: 500px) {
-  
+@media screen and (min-width: 992px) and (max-width: 1079px) and (orientation: portrait) {
+  #contents {
+    flex-direction: column;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-height: 992px) and (max-height: 1079px) and (orientation: landscape) {
+  #contents {
+    flex-direction: column;
+  }
+  #buttons-container {
+    flex-direction: row;
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1439px) {
-  
+  #contents {
+  }
+  #buttons-container {
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) and (max-width: 2158px) {
-  
+  #contents {
+  }
+  #buttons-container {
+  }
+  main {
+    width: 50%;
+  }
+  article {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 32px;
+  }
 }
 
 @media screen and (min-width: 2159px) {
